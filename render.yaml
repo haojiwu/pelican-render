@@ -1,0 +1,7 @@
+services:
+  # A static site
+  - type: web
+    name: pelican-render
+    env: static
+    buildCommand: pip install "pelican[markdown]" && pelican content
+    staticPublishPath: output
